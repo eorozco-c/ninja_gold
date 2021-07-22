@@ -15,14 +15,14 @@
     <title>Ninja Money</title>
   </head>
   <body>
-    <div class="head">
+    <header class="head">
       <h3>Your Gold: <span>{{request.session.gold}}</span></h3>
       <form action="/reset" method="POST">
         {% csrf_token %}
         <input type="submit" class="btn" value="Reset" />
       </form>
-    </div>
-    <div class="formulario">
+    </header>
+    <section class="formulario">
       <div>
         <form action="/process_money" method="POST">
           {% csrf_token %}
@@ -59,8 +59,8 @@
           <input type="submit" class="btn" value="Find Gold!" />
         </form>
       </div>
-    </div>
-    <div class="fin">
+    </section>
+    <footer class="fin">
       <h3>Activities</h3>
       <div class="box">
         <ul>
@@ -69,6 +69,6 @@
           {% endfor %}
         </ul>
       </div>
-    </div>
+    </footer>
   </body>
 </html>
